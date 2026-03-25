@@ -1,0 +1,127 @@
+.things {
+    transition: font-size .3s;
+}
+
+#yes {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#terry {
+    width: auto;
+}
+#terry:hover {
+    font-size: 1.3em;
+}
+
+#chickenbutt {
+    width: auto;
+    margin-right: 50%;
+}
+#chickenbutt:hover {
+    cursor: pointer;
+    font-size: 1.3em;
+}
+
+#tmc {
+    text-decoration: none;
+    color: inherit;
+}
+#tmc:hover {
+    cursor: pointer;
+    font-size: 1.3em;
+}
+
+.dv {
+    border: 5px solid white;
+    border-radius: 5px;
+    padding-inline: 20px;
+    font-size: 1.5em;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    color: white;
+    font-family: serif;
+    overflow: hidden;
+}
+
+#social {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-left: 50%;
+    padding: 20px 20px; 
+}
+#ico-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+#text-container {
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
+    gap: 10px;
+}
+.ico {
+    height: 1em;
+}
+.l {
+    text-decoration: none;
+    color: inherit;
+}
+
+.custom-links:hover {
+    cursor: pointer;
+}
+
+.lang {
+    transition: color .3s;
+}
+
+#ts:hover {
+    color: rgb(55, 124, 200);
+}
+
+#js:hover {
+    color: rgb(240, 220, 85);
+}
+
+#cs:hover {
+    color: rgb(131, 104, 224);
+}
+
+.python:hover #py1 {
+    color: rgb(60, 118, 167);
+}
+.python:hover #py2 {
+    color: rgb(255, 211, 71);
+}
+
+#cpp:hover {
+    color: rgb(101, 155, 210);
+}
+
+.java:hover #java1 {
+    color: rgb(248, 2, 9);
+}
+
+.java:hover #java2 {
+    color: rgb(0, 110, 185);
+}
+
+#rs:hover {
+    color: rgb(246, 75, 5);
+}
