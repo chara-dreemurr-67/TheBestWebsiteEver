@@ -11,6 +11,35 @@ body {
     overflow: hidden;
 }
 
+#yes {
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: left;
+}
+
+#chickenbutt {
+    width: auto;
+    margin-right: 50%;
+}
+#chickenbutt:hover {
+    cursor: pointer;
+    font-size: 1.3em;
+}
+
+.things {
+    transition: font-size .3s;
+}
+
+#tmc {
+    text-decoration: none;
+    color: inherit;
+}
+#tmc:hover {
+    cursor: pointer;
+    font-size: 1.3em;
+}
+
 .l {
     text-decoration: none;
     color: inherit;
@@ -89,35 +118,6 @@ body {
     justify-content: left;
     flex-direction: column;
     gap: 10px;
-}
-
-#yes {
-    position: absolute;
-    top: 0;
-    left: 0;
-    text-align: left;
-}
-
-#chickenbutt {
-    width: auto;
-    margin-right: 50%;
-}
-#chickenbutt:hover {
-    cursor: pointer;
-    font-size: 1.3em;
-}
-
-.things {
-    transition: font-size .3s;
-}
-
-#tmc {
-    text-decoration: none;
-    color: inherit;
-}
-#tmc:hover {
-    cursor: pointer;
-    font-size: 1.3em;
 }
 
 #no {
