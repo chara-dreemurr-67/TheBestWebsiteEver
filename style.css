@@ -101,8 +101,8 @@ body {
     width: 100%;
     flex-direction: row;
     justify-content: center;
-    gap: 20px;
     align-items: top;
+    gap: 20px;
 }
 
 #timebox {
@@ -157,6 +157,7 @@ body {
 
     #bottom-row {
         flex-direction: column;
+        align-items: center;
     }
 
     .dv {
