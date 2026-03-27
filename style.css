@@ -12,7 +12,8 @@ body {
 }
 
 #yes {
-    position: absolute;
+    width: 100%;
+    position: static;
     top: 0;
     left: 0;
     text-align: left;
@@ -20,7 +21,6 @@ body {
 
 #chickenbutt {
     width: auto;
-    margin-right: 50%;
 }
 #chickenbutt:hover {
     cursor: pointer;
@@ -110,20 +110,12 @@ body {
 }
 
 #social {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: auto 1fr;
     align-items: center;
-    gap: 10px;
-    padding: 20px 20px; 
-}
-#ico-container {
-    display: flex;
-    
     justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 10px;
+    gap: 5px 10px;
+    padding: 20px 20px;
 }
 .ico {
     display: inline;
@@ -132,15 +124,10 @@ body {
 .custom-links:hover {
     cursor: pointer;
 }
-#text-container {
-    display: flex;
-    justify-content: left;
-    flex-direction: column;
-    gap: 10px;
-}
 
 #no {
-    position: absolute;
+    width: 100%;
+    position: static;
     bottom: 0;
     right: 0;
     text-align: right;
@@ -160,26 +147,18 @@ body {
     font-size: 1.3em;
 }
 
-@media(max-width: 768px) {
+@media(max-width: 800px) {
     #bottom-row {
         flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
         gap: 10px;
         width: 100%;
     }
 
     .dv {
-        width: 100%;
+        width: fit-content;
         font-size: 1.1em;
         box-sizing: border-box;
-    }
-
-    #social {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    #yes, #no {
-        position: static;
-        text-align: center;
     }
 }
