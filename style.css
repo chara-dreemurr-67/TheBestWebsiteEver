@@ -9,11 +9,17 @@ body {
     color: white;
     font-family: serif;
     padding: 10px;
+    overflow: hidden;
+}
+
+.ans {
+    width: 100%;
+    position: static;
+    display: flex;
+    flex-direction: column;
 }
 
 #yes {
-    width: 100%;
-    position: static;
     top: 0;
     left: 0;
     text-align: left;
@@ -126,11 +132,9 @@ body {
 }
 
 #no {
-    width: 100%;
-    position: static;
+    text-align: right;
     bottom: 0;
     right: 0;
-    text-align: right;
 }
 
 #terry {
@@ -148,6 +152,10 @@ body {
 }
 
 @media(max-width: 800px) {
+    body {
+        overflow: auto;
+    }
+
     #bottom-row {
         flex-direction: column;
         justify-content: flex-start;
@@ -160,5 +168,9 @@ body {
         width: fit-content;
         font-size: 1.1em;
         box-sizing: border-box;
+    }
+
+    .ans {
+        gap: 3px;
     }
 }
