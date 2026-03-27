@@ -9,7 +9,6 @@ body {
     color: white;
     font-family: serif;
     padding: 10px;
-    overflow: hidden;
 }
 
 .ans {
@@ -152,25 +151,17 @@ body {
 }
 
 @media(max-width: 800px) {
-    body {
-        overflow: auto;
+    .ans {
+        gap: 3px;
     }
 
     #bottom-row {
         flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-        gap: 10px;
-        width: 100%;
     }
 
     .dv {
         width: fit-content;
         font-size: 1.1em;
         box-sizing: border-box;
-    }
-
-    .ans {
-        gap: 3px;
     }
 }
