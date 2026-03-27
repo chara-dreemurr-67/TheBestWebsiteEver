@@ -1,14 +1,14 @@
 body {
-    width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     gap: 10px;
     background-color: black;
     color: white;
     font-family: serif;
+    padding: 10px;
     overflow: hidden;
 }
 
@@ -97,7 +97,7 @@ body {
     width: 100%;
     flex-direction: row;
     justify-content: center;
-    gap: 33%;
+    gap: 20px;
     align-items: top;
 }
 
@@ -120,12 +120,14 @@ body {
 }
 #ico-container {
     display: flex;
+    
     justify-content: center;
     align-items: center;
     flex-direction: column;
     gap: 10px;
 }
 .ico {
+    display: inline;
     height: 1em;
 }
 .custom-links:hover {
@@ -157,4 +159,28 @@ body {
 }
 #breadkey:hover {
     font-size: 1.3em;
+}
+
+@media(max-width: 768px) {
+    #bottom-row {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .dv {
+        width: 100%;
+        font-size: 1.1em;
+        box-sizing: border-box;
+    }
+
+    #social {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #yes, #no {
+        position: static;
+        text-align: center;
+    }
 }
