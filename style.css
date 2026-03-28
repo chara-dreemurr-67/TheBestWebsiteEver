@@ -8,7 +8,6 @@ body {
     background-color: black;
     color: white;
     font-family: serif;
-    padding: 10px;
 }
 
 .ans {
@@ -102,7 +101,7 @@ body {
     flex-direction: row;
     justify-content: center;
     align-items: top;
-    gap: 20px;
+    gap: 10px;
 }
 
 #timebox {
