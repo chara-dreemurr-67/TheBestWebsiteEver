@@ -44,6 +44,10 @@ body {
     font-size: 1.3em;
 }
 
+#welcome {
+    text-align: center;
+}
+
 .dv {
     border: 5px solid white;
     border-radius: 5px;
@@ -160,7 +164,6 @@ body {
     }
 
     .dv {
-        width: fit-content;
         font-size: 1.1em;
         box-sizing: border-box;
     }
