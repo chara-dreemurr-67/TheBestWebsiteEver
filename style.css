@@ -18,20 +18,21 @@ body {
 }
 
 #yes {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    text-align: left;
     top: 0;
     left: 0;
-    text-align: left;
 }
 
-#chickenbutt {
-    width: auto;
-}
 #chickenbutt:hover {
     cursor: pointer;
     font-size: 1.3em;
 }
 
 .things {
+    width: fit-content;
     transition: font-size .3s;
 }
 
@@ -134,21 +135,18 @@ body {
 }
 
 #no {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
     text-align: right;
     bottom: 0;
     right: 0;
 }
 
-#terry {
-    width: auto;
-}
 #terry:hover {
     font-size: 1.3em;
 }
 
-#breadkey {
-    width: auto;
-}
 #breadkey:hover {
     font-size: 1.3em;
 }
