@@ -52,6 +52,7 @@ body {
 .dv {
     border: 5px solid white;
     border-radius: 5px;
+    height: fit-content;
     padding-inline: 20px;
     font-size: 1.5em;
 }
@@ -109,7 +110,7 @@ body {
     gap: 10px;
 }
 
-#timebox {
+.timebox {
     display: flex;
     flex-direction: column;
     justify-content: center;
