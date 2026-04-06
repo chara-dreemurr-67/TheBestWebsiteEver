@@ -1,5 +1,4 @@
 const Main = document.getElementById("main"),
-    CB = document.getElementById("chickenbutt"),
     Age = document.getElementById("age"),
     Birthday = document.getElementById("birthday"),
     Months = document.getElementById("months"),
@@ -76,17 +75,6 @@ setInterval(() => {
     UpdateCountdown(1, 0);
     Age.textContent = GetYearsSince(new Date(2007, 0, 1, 0, 0, 0, 0).getTime());
 }, 1000);
-
-CB.addEventListener("click", () => {
-    if(CBCoolDown) 
-        clearTimeout(CBCoolDown);
-    
-    CB.textContent = "chicken butt";
-    CBCoolDown = setTimeout(() => {
-        CB.textContent = "guess what?";
-        CBCoolDown = null;
-    }, 1000);
-});
 
 for(const Link of CustomHyperLinks) {
     Link.addEventListener("click", () => window.open(Link.getAttribute("csrc"), "_blank"));

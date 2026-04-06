@@ -1,5 +1,5 @@
 body {
-    min-height: 100vh;
+    min-height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -10,39 +10,9 @@ body {
     font-family: serif;
 }
 
-.ans {
-    width: 100%;
-    position: static;
-    display: flex;
-    flex-direction: column;
-}
-
-#yes {
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    text-align: left;
-    top: 0;
-    left: 0;
-}
-
-#chickenbutt:hover {
-    cursor: pointer;
-    font-size: 1.3em;
-}
-
 .things {
     width: fit-content;
     transition: font-size .3s;
-}
-
-#tmc {
-    text-decoration: none;
-    color: inherit;
-}
-#tmc:hover {
-    cursor: pointer;
-    font-size: 1.3em;
 }
 
 #welcome {
@@ -131,17 +101,11 @@ body {
     display: inline;
     height: 1em;
 }
+.custom-links {
+    width: fit-content;
+}
 .custom-links:hover {
     cursor: pointer;
-}
-
-#no {
-    display: flex;
-    flex-direction: column;
-    align-items: end;
-    text-align: right;
-    bottom: 0;
-    right: 0;
 }
 
 #terry:hover {
