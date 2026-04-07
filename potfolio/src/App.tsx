@@ -120,7 +120,7 @@ const BirthdayCountDown = ({ BirthDay, BirthMonth }: BirthdayProp): JSX.Element 
     const TimeSinceBirthday: number = Now.getTime() - NextBirthday.getTime();
 
     if(TimeSinceBirthday >= 0 && TimeSinceBirthday < 604800000) 
-        return <span>it's my birthday :)</span>;
+        return <span>🎂 it's my birthday :)</span>;
     
     if(NextBirthday < Now) 
         NextBirthday = new Date(CurrentYear + 1, BirthMonth, BirthDay);
@@ -166,7 +166,7 @@ const Link = ({ ResourceName, Handle, Href = undefined, Title = undefined }: Lin
 };
 
 const App = (): JSX.Element => 
-    <div id="main" className="flex flex-col items-center justify-center gap-[10px] mt-[3%] text-[1.5em] font-serif">
+    <div id="main" className="flex flex-col items-center justify-center gap-[10px] text-[1.5em] font-serif">
         <div className="w-fit h-fit text-center border-5 border-solid border-white rounded-[5px] px-[20px]"><p>welcome to the most 🚰 portfolio ever</p></div>
         <div className="border-5 border-solid border-white rounded-[5px] px-[20px]">
             <p>&nbsp;🇻🇳&nbsp; Vietnamese</p>
@@ -185,11 +185,13 @@ const App = (): JSX.Element =>
             <p>🖌️ i also make logos in <a target="_blank" href="https://github.com/SAWARATSUKI/KawaiiLogos">sawaratsuki</a> style (i have nothing to show for this but trust me bro)</p>
         </div>
         <div id="bottom-row" className="w-full flex flex-row items-start justify-center gap-[10px]">
-            <Clock/>
-            <BirthdayCountDown 
-                BirthDay={1} 
-                BirthMonth={0}
-            />
+            <div className="w-fit flex flex-col items-center justify-center gap-[10px]">
+                <Clock/>
+                <BirthdayCountDown 
+                    BirthDay={1} 
+                    BirthMonth={0}
+                />
+            </div>
             <div className="grid grid-cols-[auto_1fr] items-center justify-center border-5 border-solid border-white rounded-[5px] gap-x-[5px] gap-y-[10px]  h-fit p-[20px]">
                 <Link 
                     ResourceName="Youtube_logo.png" 
