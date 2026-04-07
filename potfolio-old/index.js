@@ -1,5 +1,4 @@
-const Main = document.getElementById("main"),
-    Age = document.getElementById("age"),
+const Age = document.getElementById("age"),
     Birthday = document.getElementById("birthday"),
     Months = document.getElementById("months"),
     Time = document.getElementById("time")
@@ -7,13 +6,7 @@ const Main = document.getElementById("main"),
 
 const CustomHyperLinks = document.getElementsByClassName("custom-links");
 
-/**
- * @type {number?}
- */
-let CBCoolDown = null;
-
-const GetYearsSince = (epoch) => {
-    const StartDay = new Date(epoch);
+const GetYearsSince = (StartDay) => {
     const Now = new Date();
     const Years = Now.getFullYear() - StartDay.getFullYear();
     const HasHadAnniversary = Now.getMonth() > StartDay.getMonth() || 

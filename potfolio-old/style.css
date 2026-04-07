@@ -8,6 +8,7 @@ body {
     background-color: black;
     color: white;
     font-family: serif;
+    font-size: 1.5em;
 }
 
 #welcome {
@@ -20,7 +21,6 @@ body {
     border-radius: 5px;
     height: fit-content;
     padding-inline: 20px;
-    font-size: 1.5em;
 }
 
 .ts:hover {
@@ -81,7 +81,6 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: fit-content;
     padding: 20px 20px;
 }
 
@@ -110,8 +109,11 @@ body {
         align-items: center;
     }
 
+    body {
+        size: 1em;
+    }
+
     .dv {
-        font-size: 1.1em;
         box-sizing: border-box;
     }
 }
