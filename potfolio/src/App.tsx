@@ -151,7 +151,7 @@ const Link = ({ ResourceName, Handle, Href = undefined, Title = undefined }: Lin
     return (
         <>
             <img 
-                src={`/${ResourceName}`} 
+                src={`${ResourceName}`} 
                 className={`h-[1em] w-fit${Href ? " hover:cursor-pointer" : ""}`} 
                 title={Title} 
                 onClick={Open}
