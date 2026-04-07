@@ -95,7 +95,7 @@ const Clock = (): JSX.Element => {
         hour12: true
     });
     return (
-        <div className="flex flex-col items-center justify-center border-5 border-solid border-white rounded-[5px] h-fit p-[20px]">
+        <div className="flex flex-col items-center justify-center text-center border-5 border-solid border-white rounded-[5px] h-fit p-[20px]">
             <span>🕛 it's currently</span>
             <span>{TimeString}</span>
             <span>in Vietnam</span>
@@ -134,7 +134,7 @@ const BirthdayCountDown = ({ BirthDay, BirthMonth }: BirthdayProp): JSX.Element 
 
     const Format = (Num: number) => String(Num).padStart(2, "0");
     return (
-        <div className="flex flex-col items-center justify-center border-5 border-solid border-white rounded-[5px] h-fit p-[20px]">
+        <div className="flex flex-col items-center justify-center text-center border-5 border-solid border-white rounded-[5px] h-fit p-[20px]">
             <span>🎂 countdown to my birthday</span>
             <span>{`${Format(Days)}:${Format(Hours)}:${Format(Minutes)}:${Format(Seconds)}`}</span>
         </div>
@@ -166,7 +166,7 @@ const Link = ({ ResourceName, Handle, Href = undefined, Title = undefined }: Lin
 };
 
 const App = (): JSX.Element => 
-    <div className="flex flex-col items-center gap-[10px] mt-[3%] text-[1.5em] font-serif [@media(max-width: 800px)]:text-[1em]">
+    <div id="main" className="flex flex-col items-center justify-center gap-[10px] mt-[3%] text-[1.5em] font-serif">
         <div className="w-fit h-fit text-center border-5 border-solid border-white rounded-[5px] px-[20px]"><p>welcome to the most 🚰 portfolio ever</p></div>
         <div className="border-5 border-solid border-white rounded-[5px] px-[20px]">
             <p>&nbsp;🇻🇳&nbsp; Vietnamese</p>
@@ -184,7 +184,7 @@ const App = (): JSX.Element =>
             </p>
             <p>🖌️ i also make logos in <a target="_blank" href="https://github.com/SAWARATSUKI/KawaiiLogos">sawaratsuki</a> style (i have nothing to show for this but trust me bro)</p>
         </div>
-        <div className="w-full flex flex-row items-top justify-center gap-[10px] [@media(max-width: 800px)]:flex-col [@media(max-width: 800px)]:items-center">
+        <div id="bottom-row" className="w-full flex flex-row items-start justify-center gap-[10px]">
             <Clock/>
             <BirthdayCountDown 
                 BirthDay={1} 
