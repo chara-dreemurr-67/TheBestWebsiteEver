@@ -169,7 +169,7 @@ const App = (): JSX.Element =>
     <div className="flex flex-col items-center gap-[10px] mt-[3%] text-[1.5em] font-serif [@media(max-width: 800px)]:text-[1em]">
         <div className="w-fit h-fit text-center border-5 border-solid border-white rounded-[5px] px-[20px]"><p>welcome to the most 🚰 portfolio ever</p></div>
         <div className="border-5 border-solid border-white rounded-[5px] px-[20px]">
-            <p>&nbsp;🇻🇳 Vietnamese</p>
+            <p>&nbsp;🇻🇳&nbsp; Vietnamese</p>
             <p>🌙 <Age BirthDate={new Date(2007, 0, 1, 0, 0, 0, 0)} /> years old</p>
             <p>🚰 Claire Iidea | i could be male, i could be female, why care? pronoun doesn't matter to me anyway</p>
             <p>🔖 game developer using <a href="https://godotengine.org/" target="_blank">Godot Engine</a> Mono (basically {RenderColor(["C#", "rgb(131, 104, 224)"])} version of <a className="no-underline text-[rgb(180, 180, 180)]" href="https://godotengine.org/" target="_blank">Godot Engine</a> because i fucking hate gdscript)</p>
