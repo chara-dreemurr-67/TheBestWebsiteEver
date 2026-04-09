@@ -30,8 +30,8 @@ const Age = ({ BirthDate }: AgeProp): JSX.Element => {
         return (): void => clearInterval(Interval);
     }, []);
 
-    const Years = Now.getFullYear() - BirthDate.getFullYear();
-    const HasHadAnniversary = Now.getMonth() > BirthDate.getMonth() || 
+    const Years: number = Now.getFullYear() - BirthDate.getFullYear();
+    const HasHadAnniversary: boolean = Now.getMonth() > BirthDate.getMonth() || 
         (Now.getMonth() === BirthDate.getMonth() && Now.getDate() >= BirthDate.getDate())
     ;
     
@@ -40,7 +40,7 @@ const Age = ({ BirthDate }: AgeProp): JSX.Element => {
 
 const RenderColor = (...Items: [string, string][]): JSX.Element => {
     if(Items.length === 1) {
-        const [Text, Color] = Items[0];
+        const [Text, Color]: [string, string] = Items[0];
         return (
             <span 
                 className="transition-colors duration-[.3s] hover:text-[color:var(--hover-color)]" 
@@ -85,7 +85,7 @@ const Clock = (): JSX.Element => {
         return (): void => clearInterval(Interval);
     }, []);
 
-    const TimeString = Now.toLocaleString("en-GB", {
+    const TimeString: string = Now.toLocaleString("en-GB", {
         timeZone: "Asia/Ho_Chi_Minh",
         weekday: "short",
         year: "numeric",
