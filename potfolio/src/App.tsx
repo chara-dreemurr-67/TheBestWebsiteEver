@@ -7,10 +7,12 @@ interface BirthdayProp {
 }
 
 interface LinkProp {
-    ResourceName: string, 
-    Handle: string, 
+    children: React.ReactNode, 
+    ResourceName?: string, 
     Href?: string, 
-    Title?: string
+    Title?: string,
+    ClassName?: string,
+    ID?: string
 }
 
 interface AgeProp {
@@ -141,7 +143,7 @@ const BirthdayCountDown = ({ BirthDay, BirthMonth }: BirthdayProp): JSX.Element 
     );
 };
 
-const Link = ({ ResourceName, Handle, Href = undefined, Title = undefined }: LinkProp): JSX.Element => {
+const Link = ({ children, ResourceName = undefined, Href = undefined, Title = undefined, ClassName = undefined, ID = undefined }: LinkProp): JSX.Element => {
     const Open = (): void => {
         if(Href) {
             window.open(Href, "blank_");
@@ -150,17 +152,18 @@ const Link = ({ ResourceName, Handle, Href = undefined, Title = undefined }: Lin
 
     return (
         <>
-            <img 
+            {ResourceName ? <img 
                 src={`${ResourceName}`} 
                 className={`h-[1em] w-fit${Href ? " hover:cursor-pointer" : ""}`} 
                 title={Title} 
                 onClick={Open}
-            />
+            /> : <></>}
             <span 
-                className={`w-fit${Href ? " hover:cursor-pointer" : ""}`} 
+                className={`w-fit${Href ? " hover:cursor-pointer" : ""} ${ClassName}`} 
                 title={Title} 
                 onClick={Open}
-            >{Handle}</span>
+                id={ID}
+            >{children}</span>
         </>
     );
 };
@@ -172,7 +175,16 @@ const App = (): JSX.Element =>
             <p>&nbsp;🇻🇳&nbsp; Vietnamese</p>
             <p>🌙 <Age BirthDate={new Date(2007, 0, 1, 0, 0, 0, 0)} /> years old</p>
             <p>🚰 Claire Iidea | i could be male, i could be female, why care? pronoun doesn't matter to me anyway</p>
-            <p>🔖 game developer using <a href="https://godotengine.org/" target="_blank">Godot Engine</a> Mono (basically {RenderColor(["C#", "rgb(131, 104, 224)"])} version of <a className="no-underline text-[rgb(180, 180, 180)]" href="https://godotengine.org/" target="_blank">Godot Engine</a> because i fucking hate gdscript)</p>
+            <p>🔖 game developer using {" "}
+                <Link Href="https://godotengine.org/" ClassName="text-[rgb(180,180,180)]">
+                    Godot Engine
+                </Link> {" "}
+                Mono (basically {RenderColor(["C#", "rgb(131, 104, 224)"])} version of {" "}
+                <Link Href="https://godotengine.org/" ClassName="text-[rgb(180,180,180)]"> 
+                    Godot Engine
+                </Link> {" "}
+                because i fucking hate gdscript)
+            </p>
             <p>💯 i know:{" "}
                 {RenderColor(["Type", "rgb(55, 124, 200)"])}/{RenderColor(["JavaScript", "rgb(240, 220, 85)"])}{" | "}
                 {RenderColor(["C#", "rgb(131, 104, 224)"])}{" | "}
@@ -182,7 +194,11 @@ const App = (): JSX.Element =>
                 {RenderColor(["Rust", "rgb(246, 75, 5)"])}{" "}
                 (athough i only really use the first 4) (TypeScript my beloved)
             </p>
-            <p>🖌️ i also make logos in <a target="_blank" href="https://github.com/SAWARATSUKI/KawaiiLogos">sawaratsuki</a> style (i have nothing to show for this but trust me bro)</p>
+            <p>🖌️ i also make logos in {" "}
+                <Link Href="https://github.com/SAWARATSUKI/KawaiiLogos" ClassName="text-[rgb(180,180,180)]">
+                    sawaratsuki
+                </Link> {" "}
+            style (i have nothing to show for this but trust me bro)</p>
         </div>
         <div id="bottom-row" className="w-full flex flex-row items-start justify-center gap-[10px]">
             <div className="w-fit flex flex-col items-center justify-center gap-[10px]">
@@ -195,31 +211,26 @@ const App = (): JSX.Element =>
             <div className="grid grid-cols-[auto_1fr] items-center justify-center border-5 border-solid border-white rounded-[5px] gap-x-[5px] gap-y-[10px]  h-fit p-[20px]">
                 <Link 
                     ResourceName="Youtube_logo.png" 
-                    Handle="@uwungu01" 
                     Href="https://www.youtube.com/@uwungu01" 
                     Title="i barely upload anything there though"
-                />
+                >@uwungu01</Link>
                 <Link 
                     ResourceName="GitHub_Invertocat_White_Clearspace.png" 
-                    Handle="chara-dreemurr-67"
                     Href="https://github.com/chara-dreemurr-67"
-                />
+                >chara-dreemurr-67</Link>
                 <Link 
                     ResourceName="GitHub_Invertocat_White_Clearspace.png" 
-                    Handle="this website itself, on github" 
                     Href="https://github.com/chara-dreemurr-67/TheBestWebsiteEver"
-                />
+                >this website itself, on github</Link>
                 <Link 
                     ResourceName="discord-avatar-512-S11Q6.png" 
-                    Handle="TM™C©" 
                     Href="https://discord.gg/trademarkcopyright" 
                     Title="i like my trademark copyrighted bruh"
-                />
+                >TM™C©</Link>
                 <Link 
                     ResourceName="discord-avatar-512-S11Q6.png" 
-                    Handle="@chara_dreemurr_67" 
                     Title="active in .gg/trademarkcopyright and .gg/geometrydash. might or might not ignore your dms"
-                />
+                >@chara_dreemurr_67</Link>
             </div>
         </div>
     </div>
