@@ -237,7 +237,7 @@ const App = (): JSX.Element =>
                 <Link 
                     ResourceName="discord-avatar-512-S11Q6.png" 
                     Title="active in .gg/trademarkcopyright and .gg/geometrydash. might or might not ignore your dms"
-                >@chara_dreemurr_67</Link>
+                >@chara.dreemurr.67</Link>
             </div>
         </div>
     </div>
