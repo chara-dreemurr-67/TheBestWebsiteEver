@@ -35,7 +35,7 @@ const App = (): JSX.Element =>
                 <Link Href="https://github.com/SAWARATSUKI/KawaiiLogos" ClassName="text-[rgb(180,180,180)]">
                     sawaratsuki
                 </Link> {" "}
-                style (i have nothing to show for this but trust me bro)
+                style (nvm i have created a <Link Href="https://github.com/chara-dreemurr-67/ClairesSanctum" ClassName="text-[rgb(180,180,180)]">repository</Link> for that now)
             </span>
             <span>🎮 my favorite games: {" "}
                 <Link Href="https://store.steampowered.com/app/239140/Dying_Light/" ClassName="text-[rgb(180,180,180)]">Dying Light</Link>{", "}
