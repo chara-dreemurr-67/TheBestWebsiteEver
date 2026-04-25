@@ -66,11 +66,11 @@ const App = (): JSX.Element =>
                     ResourceName="GitHub_Invertocat_White_Clearspace.png" 
                     Href="https://github.com/chara-dreemurr-67/TheBestWebsiteEver"
                 >this website itself, on github</Link>
-                <Link 
+                {/*<Link 
                     ResourceName="discord-avatar-512-S11Q6.png" 
                     Href="https://discord.gg/trademarkcopyright" 
                     Title="i like my trademark copyrighted bruh"
-                >TM™C©</Link>
+                >TM™C©</Link>*/}
                 <Link 
                     ResourceName="discord-avatar-512-S11Q6.png" 
                     Title="active in .gg/trademarkcopyright and .gg/geometrydash. might or might not ignore your dms"
