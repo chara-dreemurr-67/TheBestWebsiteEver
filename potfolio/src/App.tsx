@@ -73,7 +73,8 @@ const App = (): JSX.Element =>
                 >TM™C©</Link>*/}
                 <Link 
                     ResourceName="discord-avatar-512-S11Q6.png" 
-                    Title="active in .gg/trademarkcopyright and .gg/geometrydash. might or might not ignore your dms"
+                    Href="https://discord.com/users/1132150203714117652"
+                    Title="active in .gg/geometrydash. might or might not ignore your dms"
                 >@chara.dreemurr.67</Link>
             </div>
         </div>
